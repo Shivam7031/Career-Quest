@@ -1,100 +1,175 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Career Quest — README</title>
-  <link rel="stylesheet" href="./README.css" />
-</head>
-<body>
-  <header class="hero">
-    <div class="container">
-      <h1>Career Quest</h1>
-      <p class="tagline">Full‑stack career counselling & course recommendation app (React + Vite frontend, Flask backend)</p>
-    </div>
-  </header>
+# Career Quest
 
-  <main class="container">
-    <section>
-      <h2>Overview</h2>
-      <p>Career Quest predicts courses based on user interests, recommends Coursera courses using TF‑IDF similarity, and supports interview-question generation with audio evaluation.</p>
-    </section>
+<div align="center">
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="Python">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn">
+  <img src="https://img.shields.io/badge/Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini API">
+</div>
 
-    <section>
-      <h2>Repository layout (high level)</h2>
-      <ul>
-        <li><strong>/backend</strong> — Flask app, ML pipeline, recommender helpers, templates and CSV datasets.</li>
-        <li><strong>/frontend</strong> — React + Vite TypeScript app (UI, chatbot components).</li>
-        <li><strong>README.html / README.css</strong> — this file and stylesheet.</li>
-      </ul>
-    </section>
+## 📋 Description
 
-    <section>
-      <h2>Quick start — Backend (Flask)</h2>
-      <ol>
-        <li>Create a Python virtual env:
-          <pre>python -m venv .venv
-.venv\Scripts\activate</pre>
-        </li>
-        <li>Install deps:
-          <pre>pip install -r backend/requirements.txt</pre>
-        </li>
-        <li>Set environment variables (example):
-          <pre>set GEMINI_API_KEY=your_key_here</pre>
-        </li>
-        <li>Run:
-          <pre>cd backend
-python app.py</pre>
-        </li>
-      </ol>
-    </section>
+Career Quest is an innovative full-stack web application designed to assist students and professionals in their career development journey. Leveraging machine learning algorithms and AI-powered features, the platform provides personalized course recommendations, interview preparation tools, and educational resources to help users make informed career decisions.
 
-    <section>
-      <h2>Quick start — Frontend (React + Vite)</h2>
-      <ol>
-        <li>Install Node (>=16), then:
-          <pre>cd frontend
-npm install
-npm run dev</pre>
-        </li>
-        <li>Open the dev URL shown by Vite (default: http://localhost:5173).</li>
-      </ol>
-    </section>
+## ✨ Features
 
-    <section>
-      <h2>Important files & endpoints</h2>
-      <ul>
-        <li><code>backend/app.py</code> — Flask routes, ML orchestration, Gemini integration.</li>
-        <li><code>backend/course.py</code> — TF‑IDF & recommender helpers.</li>
-        <li><code>backend/Courser.csv</code>, <code>backend/stud_training.csv</code> — datasets.</li>
-        <li>Frontend entry: <code>frontend/src/main.tsx</code>, UI: <code>frontend/src/App.tsx</code>.</li>
-      </ul>
-    </section>
+- **🎯 Interest-Based Course Recommendations**: Uses machine learning models (Decision Tree, Random Forest, Naive Bayes) to suggest suitable courses based on user interests
+- **🤖 AI-Powered Interview Practice**: Generates insightful interview questions using Google's Gemini API and provides feedback on audio responses
+- **🔍 Coursera Course Search**: Find similar courses on Coursera using content-based filtering and TF-IDF vectorization
+- **🎤 Speech Recognition**: Integrated speech-to-text functionality for interview practice
+- **📱 Responsive Design**: Modern, user-friendly interface built with React and TypeScript
+- **📊 Data-Driven Insights**: Analyzes student data to predict career paths and course preferences
 
-    <section>
-      <h2>Data & credentials</h2>
-      <ul>
-        <li>Place Coursera CSV at <code>backend/Courser.csv</code>.</li>
-        <li>Set <code>GEMINI_API_KEY</code> in environment for Gemini features.</li>
-      </ul>
-    </section>
+## 🛠️ Tech Stack
 
-    <section>
-      <h2>Troubleshooting</h2>
-      <ul>
-        <li>If recommender returns no results: broaden keywords — it relies on course "Skills" text.</li>
-        <li>For Gemini / API errors: confirm <code>GEMINI_API_KEY</code> and network access.</li>
-      </ul>
-    </section>
+### Backend
+- **Framework**: Flask (Python)
+- **Machine Learning**: scikit-learn, pandas, numpy
+- **AI Integration**: Google Gemini API
+- **Audio Processing**: SpeechRecognition library
+- **Data Processing**: TF-IDF Vectorization, Sigmoid Kernel for similarity
 
-    <section class="footer-note">
-      <h3>Contributing & License</h3>
-      <p>Fork, create a branch, add tests, and open a PR. Add a LICENSE file before publishing.</p>
-    </section>
-  </main>
+### Frontend
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **HTTP Client**: Axios
+- **Additional Libraries**: React Speech Recognition, React Webcam
 
-  <footer class="site-footer">
-    <div class="container">Career Quest — local README view</div>
-  </footer>
-</body>
-</html>
+### Database & Storage
+- **Data Files**: CSV files for training data and course information
+- **File Uploads**: Local storage for audio files
+
+## 📋 Prerequisites
+
+Before running this application, ensure you have the following installed:
+
+- **Python 3.8+**
+- **Node.js 16+**
+- **npm or yarn**
+- **Git**
+
+You'll also need:
+- A Google Gemini API key (set in `.env` file)
+- Required Python packages (listed in `backend/requirements.txt`)
+- Node.js dependencies (listed in `frontend/package.json`)
+
+## 🚀 Installation
+
+### Backend Setup
+
+1. **Navigate to the backend directory:**
+   ```bash
+   cd backend
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   ```
+
+3. **Activate the virtual environment:**
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Set up environment variables:**
+   Create a `.env` file in the `backend` directory and add your Gemini API key:
+   ```
+   GEMINI_API_KEY=your_api_key_here
+   ```
+
+### Frontend Setup
+
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+## 🎯 Usage
+
+### Running the Application
+
+1. **Start the Backend:**
+   ```bash
+   cd backend
+   python app.py
+   ```
+   The backend will run on `http://localhost:5000`
+
+2. **Start the Frontend:**
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+   The frontend will run on `http://localhost:5173`
+
+3. **Access the Application:**
+   Open your browser and navigate to `http://localhost:5173`
+
+### Key Features Usage
+
+- **Course Recommendation**: Select your interests and choose an ML algorithm to get personalized course suggestions
+- **Interview Practice**: Enter a job domain to generate questions, record your response, and receive AI feedback
+- **Course Search**: Search for courses on Coursera and get similar recommendations
+
+## 📡 API Endpoints
+
+The backend provides the following API endpoints:
+
+- `GET /`: Main application route
+- `POST /`: Submit interests and algorithm for course prediction
+- `GET /generate-questions`: Serve Gemini question generation page
+- `POST /api/get-questions`: Generate interview questions for a domain
+- `POST /api/submit-audio`: Submit audio for AI feedback analysis
+- `GET /courses_main`: Display course information
+- `GET /api/courses`: Retrieve courses for a specific degree
+- `GET /coursera`: Coursera course search page
+- `POST /predict`: Search for similar Coursera courses
+
+## 🤝 Contributing
+
+We welcome contributions to Career Quest! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Google Gemini API for AI-powered features
+- Coursera for course data
+- Open-source community for the amazing libraries used
+
+## 📞 Contact
+
+For questions or support, please open an issue on GitHub.
+
+---
+
+<div align="center">
+  <p>Made with ❤️ for career guidance</p>
+</div>
