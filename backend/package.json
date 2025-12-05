@@ -1,0 +1,11 @@
+{
+  "name": "career-quest-backend",
+  "version": "1.0.0",
+  "description": "Backend for the Career Quest application",
+  "main": "app.py",
+  "scripts": {
+    "start": "python app.py"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

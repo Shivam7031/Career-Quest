@@ -1,0 +1,6 @@
+Flask
+pandas
+scikit-learn
+python-dotenv
+SpeechRecognition
+requests
