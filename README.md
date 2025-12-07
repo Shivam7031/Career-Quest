@@ -2,19 +2,17 @@
 
 <div align="center" style="font-family: 'Segoe UI', sans-serif;">
 
-  <h1 style="font-size: 48px; font-weight: 800;">🎯 Career Quest</h1>
+  <h1 style="font-size: 48px; font-weight: 900;">🎯 Career Quest</h1>
 
   <p style="max-width: 780px; font-size: 18px; color: #555;">
-    <strong>Career Quest</strong> is an interactive career-guidance platform helping students and
-    professionals explore career paths, assess their skills, and receive personalized recommendations.
-    Built with clean HTML & CSS, it focuses on clarity, responsiveness, and elegant UI components.
+    <strong>Career Quest</strong> is an interactive career-guidance platform designed to help users explore
+    job roles, assess skills, and find the perfect career pathway. This README includes real-time styled
+    components, interactive UI sections, and animated visuals powered directly through HTML & CSS.
   </p>
 
-  <br>
-
-  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS-blue?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Project-Active-green?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Version-1.0-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Built_with-HTML_&_CSS-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Version-2.0-orange?style=for-the-badge"/>
 
 </div>
 
@@ -22,79 +20,46 @@
 
 
 
-<!-- ========================== LIVE CAREER CARDS =============================== -->
+<!-- =============================================================== -->
+<!-- ============= LIVE COMPONENT 1: FLIP CAREER CARDS ============= -->
+<!-- =============================================================== -->
 
-<h2>🧩 Live Component 1: Interactive Career Cards</h2>
+<h2>🧩 Live Component 1: Flip Career Cards</h2>
 
-<p>A simple hover-animated card component representing career options:</p>
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
 
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  <div style="width:260px; height:160px; perspective:800px;">
+    <div style="width:100%; height:100%; transition:0.6s; transform-style:preserve-3d;"
+         onmouseover="this.style.transform='rotateY(180deg)'"
+         onmouseout="this.style.transform='rotateY(0deg)'">
 
-  <div style="
-      width: 240px; padding: 18px; border-radius: 12px; 
-      border: 1px solid #ddd; transition: 0.3s; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    "
-    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
-    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.07)'">
+      <div style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#4CAF50; color:white; padding:20px; border-radius:12px;">
+        <h3>💻 Software Engineer</h3>
+        <p>Build and innovate</p>
+      </div>
 
-    <h3 style="margin-top:0;">💻 Software Engineer</h3>
-    <p style="color:#444;">Build modern software, applications, and scalable systems.</p>
+      <div style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#2E7D32; color:white; padding:20px; border-radius:12px; transform:rotateY(180deg);">
+        <p>Skills: Algorithms, Data Structures, System Design</p>
+      </div>
+
+    </div>
   </div>
 
-  <div style="
-      width: 240px; padding: 18px; border-radius: 12px; 
-      border: 1px solid #ddd; transition: 0.3s; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    "
-    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
-    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.07)'">
+  <div style="width:260px; height:160px; perspective:800px;">
+    <div style="width:100%; height:100%; transition:0.6s; transform-style:preserve-3d;"
+         onmouseover="this.style.transform='rotateY(180deg)'"
+         onmouseout="this.style.transform='rotateY(0deg)'">
 
-    <h3 style="margin-top:0;">📊 Data Analyst</h3>
-    <p style="color:#444;">Analyze datasets to uncover insights and trends.</p>
-  </div>
+      <div style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#2196F3; color:white; padding:20px; border-radius:12px;">
+        <h3>📊 Data Analyst</h3>
+        <p>Insights & Trends</p>
+      </div>
 
-  <div style="
-      width: 240px; padding: 18px; border-radius: 12px; 
-      border: 1px solid #ddd; transition: 0.3s; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07);
-    "
-    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.15)'"
-    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.07)'">
+      <div style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#0D47A1; color:white; padding:20px; border-radius:12px; transform:rotateY(180deg);">
+        <p>Skills: Excel, SQL, Visualization</p>
+      </div>
 
-    <h3 style="margin-top:0;">🎨 UI/UX Designer</h3>
-    <p style="color:#444;">Design user-friendly interfaces and visual experiences.</p>
-  </div>
-
-</div>
-
-<br><br>
-
-
-
-<!-- ========================== LIVE SKILL BARS =============================== -->
-
-<h2>📊 Live Component 2: Skill Meter Bars</h2>
-
-<p>Live animated-style skill bars (HTML-only):</p>
-
-<div style="max-width: 650px;">
-
-  <p><strong>Logical Thinking</strong></p>
-  <div style="background:#eee; width:100%; height:12px; border-radius:10px;">
-    <div style="width:85%; height:12px; background:#4CAF50; border-radius:10px;"></div>
-  </div>
-  <br>
-
-  <p><strong>Communication</strong></p>
-  <div style="background:#eee; width:100%; height:12px; border-radius:10px;">
-    <div style="width:70%; height:12px; background:#2196F3; border-radius:10px;"></div>
-  </div>
-  <br>
-
-  <p><strong>Leadership</strong></p>
-  <div style="background:#eee; width:100%; height:12px; border-radius:10px;">
-    <div style="width:60%; height:12px; background:#FF9800; border-radius:10px;"></div>
+    </div>
   </div>
 
 </div>
@@ -103,25 +68,124 @@
 
 
 
-<!-- ========================== LIVE STAT COUNTERS =============================== -->
+<!-- =============================================================== -->
+<!-- ================ LIVE COMPONENT 2: TABS SECTION =============== -->
+<!-- =============================================================== -->
 
-<h2>📈 Live Component 3: Animated Stats (CSS Style)</h2>
+<h2>📁 Live Component 2: Interactive Tabs (HTML only)</h2>
+
+<div style="border:1px solid #ddd; padding:20px; border-radius:10px; max-width:700px;">
+
+  <style>
+    .tab-btn { padding:10px 18px; cursor:pointer; border-radius:6px; display:inline-block; margin-right:10px; background:#eee; }
+    .tab-btn:hover { background:#ddd; }
+    .tab-box { display:none; padding:15px; }
+  </style>
+
+  <div>
+    <span class="tab-btn" onclick="this.parentElement.nextElementSibling.children[0].style.display='block'; this.parentElement.nextElementSibling.children[1].style.display='none'; this.parentElement.nextElementSibling.children[2].style.display='none';">Overview</span>
+    <span class="tab-btn" onclick="this.parentElement.nextElementSibling.children[0].style.display='none'; this.parentElement.nextElementSibling.children[1].style.display='block'; this.parentElement.nextElementSibling.children[2].style.display='none';">Skills</span>
+    <span class="tab-btn" onclick="this.parentElement.nextElementSibling.children[0].style.display='none'; this.parentElement.nextElementSibling.children[1].style.display='none'; this.parentElement.nextElementSibling.children[2].style.display='block';">Careers</span>
+  </div>
+
+  <div>
+    <div class="tab-box" style="display:block;">Career Quest helps individuals explore skillsets and professional paths.</div>
+    <div class="tab-box">Skills assessed: Logical Thinking, Communication, Leadership.</div>
+    <div class="tab-box">Careers: Software Engineer, Data Analyst, Designer, Researcher.</div>
+  </div>
+
+</div>
+
+<br><br>
+
+
+
+<!-- =============================================================== -->
+<!-- ================ LIVE COMPONENT 3: FAQ COLLAPSE =============== -->
+<!-- =============================================================== -->
+
+<h2>❓ Live Component 3: Expand/Collapse FAQ</h2>
+
+<div style="max-width:750px;">
+
+  <details style="margin-bottom:10px; padding:12px; border:1px solid #ccc; border-radius:8px;">
+    <summary style="font-size:17px; font-weight:600;">What is Career Quest?</summary>
+    <p style="margin-top:10px;">A platform to explore career paths and skill development.</p>
+  </details>
+
+  <details style="margin-bottom:10px; padding:12px; border:1px solid #ccc; border-radius:8px;">
+    <summary style="font-size:17px; font-weight:600;">Is it beginner friendly?</summary>
+    <p style="margin-top:10px;">Yes, anyone can use it whether a student or professional.</p>
+  </details>
+
+  <details style="margin-bottom:10px; padding:12px; border:1px solid #ccc; border-radius:8px;">
+    <summary style="font-size:17px; font-weight:600;">Does it provide recommendations?</summary>
+    <p style="margin-top:10px;">Yes, based on your assessed skills and preferences.</p>
+  </details>
+
+</div>
+
+<br><br>
+
+
+
+<!-- =============================================================== -->
+<!-- ================ LIVE COMPONENT 4: CSS TOGGLE ================= -->
+<!-- =============================================================== -->
+
+<h2>🔘 Live Component 4: CSS Toggle Switch</h2>
+
+<label style="position:relative; display:inline-block; width:60px; height:28px;">
+  <input type="checkbox" style="opacity:0; width:0; height:0;" 
+         onclick="this.nextElementSibling.style.background=this.checked ? '#4CAF50' : '#ccc'; this.nextElementSibling.children[0].style.transform=this.checked ? 'translateX(32px)' : 'translateX(0px)'">
+  <span style="position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:#ccc; border-radius:34px; transition:0.3s;">
+    <span style="position:absolute; height:22px; width:22px; left:4px; bottom:3px; background:white; border-radius:50%; transition:0.3s;"></span>
+  </span>
+</label>
+
+<br><br>
+
+
+
+<!-- =============================================================== -->
+<!-- ================ LIVE COMPONENT 5: SEARCH BAR ================= -->
+<!-- =============================================================== -->
+
+<h2>🔍 Live Component 5: Styled Search Bar</h2>
+
+<div style="max-width:500px;">
+  <input type="text" placeholder="Search for careers..." 
+         style="width:100%; padding:12px; border-radius:8px; border:1px solid #aaa; font-size:16px;">
+</div>
+
+<br><br>
+
+
+
+<!-- =============================================================== -->
+<!-- ============== LIVE COMPONENT 6: PROGRESS RINGS =============== -->
+<!-- =============================================================== -->
+
+<h2>⭕ Live Component 6: Circular Skill Rings</h2>
 
 <div style="display:flex; gap:40px; flex-wrap:wrap;">
 
   <div style="text-align:center;">
-    <h2 style="margin:0; font-size:40px; color:#4CAF50;">10K+</h2>
-    <p>Users Guided</p>
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="50" stroke="#eee" stroke-width="10" fill="none"></circle>
+      <circle cx="60" cy="60" r="50" stroke="#4CAF50" stroke-width="10" fill="none"
+              stroke-dasharray="314" stroke-dashoffset="60" transform="rotate(-90 60 60)"></circle>
+    </svg>
+    <p>Logical Thinking – 80%</p>
   </div>
 
   <div style="text-align:center;">
-    <h2 style="margin:0; font-size:40px; color:#2196F3;">150+</h2>
-    <p>Careers Listed</p>
-  </div>
-
-  <div style="text-align:center;">
-    <h2 style="margin:0; font-size:40px; color:#FF5722;">98%</h2>
-    <p>Positive Feedback</p>
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="50" stroke="#eee" stroke-width="10" fill="none"></circle>
+      <circle cx="60" cy="60" r="50" stroke="#2196F3" stroke-width="10" fill="none"
+              stroke-dasharray="314" stroke-dashoffset="100" transform="rotate(-90 60 60)"></circle>
+    </svg>
+    <p>Communication – 70%</p>
   </div>
 
 </div>
@@ -130,59 +194,9 @@
 
 
 
-<!-- ========================== LIVE CTA BUTTON =============================== -->
-
-<h2>🔘 Live Component 4: Call-to-Action Button</h2>
-
-<a href="#" style="
-  display:inline-block; padding:14px 26px; background:#007bff; 
-  color:#fff; border-radius:8px; text-decoration:none; font-size:18px;
-  transition:0.3s;
-" 
-onmouseover="this.style.background='#0056d6'"
-onmouseout="this.style.background='#007bff'">
-  🚀 Start Your Career Journey
-</a>
-
-<br><br><br>
-
-
-
-<!-- ========================== LIVE ROADMAP =============================== -->
-
-<h2>🛣️ Live Component 5: Project Roadmap Progress</h2>
-
-<p>Visual roadmap progress indicator:</p>
-
-<div style="max-width:700px;">
-
-  <p>Career Directory Module</p>
-  <div style="background:#ddd; height:10px; border-radius:8px;">
-    <div style="background:#4CAF50; height:10px; width:90%; border-radius:8px;"></div>
-  </div>
-  <small>90% Complete</small>
-  <br><br>
-
-  <p>Skill Assessment Engine</p>
-  <div style="background:#ddd; height:10px; border-radius:8px;">
-    <div style="background:#2196F3; height:10px; width:65%; border-radius:8px;"></div>
-  </div>
-  <small>65% Complete</small>
-  <br><br>
-
-  <p>Recommendation Algorithm</p>
-  <div style="background:#ddd; height:10px; border-radius:8px;">
-    <div style="background:#FF9800; height:10px; width:40%; border-radius:8px;"></div>
-  </div>
-  <small>40% Complete</small>
-
-</div>
-
-<br><br>
-
-
-
-<!-- ========================== REST OF README =============================== -->
+<!-- =============================================================== -->
+<!-- ==================== REST OF README =========================== -->
+<!-- =============================================================== -->
 
 <hr>
 
